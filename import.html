@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Import trades – Portfolio Tracker</title>
+  <meta name="description" content="How to import your buys and sells into Portfolio Tracker from a spreadsheet: download the template, fill it in, save it as CSV and choose the file in the app.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">Portfolio Tracker</a>
+    <nav><a href="index.html">Home</a><a href="import.html">Import</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+  </header>
+
+  <main>
+    <h1>Import trades from a spreadsheet</h1>
+    <p>Already keep your buys and sells in a spreadsheet, or export them from your broker? Put them into the template,
+      save it as a CSV file and the app adds them to the portfolio you choose. Nothing is sent anywhere: the file is read
+      on your phone.</p>
+
+    <div class="card">
+      <p><strong><a href="downloads/portfolio-tracker-import-template.csv" download>Download the template</a></strong>
+        (portfolio-tracker-import-template.csv)</p>
+      <p class="muted">You can also save it from the app: Settings → Import trades (table) → Save template.</p>
+    </div>
+
+    <h2>How it works</h2>
+    <ol>
+      <li>Open the template in Excel, Google Sheets, Numbers or LibreOffice. One line is one buy or one sell. Lines that
+        start with # are examples and are ignored (remove the # to use one).</li>
+      <li>Save it as <strong>CSV</strong> (in Excel: File → Save As → “CSV (Comma delimited)” or “CSV UTF-8”).</li>
+      <li>Get the file to your phone (cloud drive, e-mail or cable).</li>
+      <li>In the app open <strong>Settings → Import trades (table)</strong>, choose the portfolio and choose file to upload.</li>
+      <li>The app shows a preview: how many trades will be added, how many are already in the app (they are skipped) and
+        which lines have a problem and why. Then press <strong>Import</strong>.</li>
+    </ol>
+
+    <h2>The columns</h2>
+    <div class="card">
+      <ul>
+        <li><strong>date</strong> – the day of the trade, best as <code>2024-03-12</code>; <code>12.3.2024</code> works too.
+          A date like <code>3/4/2024</code> is refused, because it means different days in different countries.</li>
+        <li><strong>type</strong> – <code>BUY</code> or <code>SELL</code>.</li>
+        <li><strong>asset</strong> – <code>STOCK</code> (also ETFs), <code>CRYPTO</code> or <code>METAL</code>.</li>
+        <li><strong>symbol</strong> – what the asset is called:
+          <ul>
+            <li><em>Stocks and ETFs:</em> the symbol you find when you search for the asset in the app (Add holding), for example
+              <code>MSFT</code> or <code>VWCE.DE</code>. If you are not sure, add the asset in the app and look at its card.</li>
+            <li><em>Crypto:</em> the ticker or the name of any of the 30 biggest coins, in capital or small letters: <code>BTC</code> or
+              <code>Bitcoin</code>, <code>ETH</code> or <code>Ethereum</code>, <code>ADA</code> or <code>Cardano</code>, and so on.
+              (See the list below.)</li>
+            <li><em>Metals:</em> <code>Gold</code>, <code>Silver</code>, <code>Platinum</code> or <code>Palladium</code>
+              (or the codes <code>XAU</code>, <code>XAG</code>, <code>XPT</code>, <code>XPD</code>).</li>
+          </ul></li>
+        <li><strong>name</strong> – optional, shown in the list.</li>
+        <li><strong>quantity</strong> – a positive number (metals in troy ounces).</li>
+        <li><strong>price</strong> – the price of one unit.</li>
+        <li><strong>currency</strong> – <code>EUR</code> or <code>USD</code> (empty means EUR).</li>
+      </ul>
+      <p class="muted">The order of the columns does not matter. Decimal commas and a semicolon, comma or tab as the separator are fine.</p>
+    </div>
+
+    <h2>The 30 coins you can write by ticker or name</h2>
+    <div class="card">
+      <p>Bitcoin (BTC), Ethereum (ETH), BNB, XRP, Solana (SOL), TRON (TRX), Zcash (ZEC), Hyperliquid (HYPE), Dogecoin (DOGE),
+        Monero (XMR), Chainlink (LINK), Cardano (ADA), NEAR Protocol (NEAR), Stellar (XLM), Bitcoin Cash (BCH), Litecoin (LTC),
+        Uniswap (UNI), Avalanche (AVAX), Sui (SUI), Toncoin (TON or GRAM), Hedera (HBAR), Shiba Inu (SHIB), Bittensor (TAO),
+        Cronos (CRO), Quant (QNT), Ethena (ENA), Aave (AAVE), Pepe (PEPE), Polkadot (DOT), Worldcoin (WLD).</p>
+      <p class="muted">This is the list at the time of writing; coins pegged to a currency (stablecoins) are not included. A coin that is
+        not in the list can still be imported when you write the name it has in the app's search, in small letters, with dashes
+        instead of spaces (for example <code>bitcoin-cash</code>); check the price in the app afterwards.</p>
+    </div>
+
+    <h2>Good to know</h2>
+    <ul>
+      <li><strong>Your Cash is not changed.</strong> The file holds trades, not deposits or withdrawals.</li>
+      <li><strong>Importing the same file twice is safe:</strong> trades that are already in the app are skipped.</li>
+      <li>The history of each asset is played again, so the average buy price and the realized profit are worked out for you.
+        If a sale would be larger than what you hold at that moment, that asset is not imported (the app tells you).</li>
+      <li>The rate of the day is used for trades in US dollars.</li>
+      <li>Not supported yet: other currencies, dividends, splits, options, and Excel (.xlsx) files – save as CSV first.</li>
+    </ul>
+
+    <h2>Not investment advice</h2>
+    <p class="muted">Portfolio Tracker is a tool for your own record keeping. Prices and figures come from third parties, may be
+      delayed, incomplete or inaccurate, and are for information only. Check imported trades against your broker.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 Portfolio Tracker · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+  </footer>
+</body>
+</html>

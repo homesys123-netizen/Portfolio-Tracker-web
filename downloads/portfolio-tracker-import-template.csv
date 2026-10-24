@@ -1,0 +1,6 @@
+sep=;
+date;type;asset;symbol;name;quantity;price;currency
+#2024-03-12;BUY;STOCK;MSFT;Microsoft Corporation;12;310.50;USD
+#2024-06-20;SELL;STOCK;MSFT;Microsoft Corporation;5;410;USD
+#2024-02-05;BUY;CRYPTO;BTC;;0.12;38000;EUR
+#2023-11-20;BUY;METAL;Gold;;1.5;1900;USD
